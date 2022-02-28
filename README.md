@@ -29,17 +29,19 @@ a spot in the closet for the RTL-SDR.
 2022-02-28 The image will build and run, but I don't have the audio portion (soundcard or RTL-SDR)
 set up yet, so it exits immediately.
 
-### Configuration
-
-Currently I put a default direwolf.conf file into the direwolf user's home directory
-to make the app happy. I need to customize it and possibly move it into a volume,
-so that you can modify it for your site.
-
 ### GPS
 
-Time to get GPS working (time ha ha ha).
-This will be a separate project to run gpsd.
-Damn but I need easy access to my roof.
+Time to get GPS working. This will be a separate project to run gpsd.
+Damn but I need easy access to my roof. Yes, some people think about
+GPS as a positioning system but for me, it's a hobby in itself so
+having a GPS reference station is valuable too.
+
+### Configuration
+
+I copied the direwolf.conf file from the build and then checked it in here.
+To keep things as simple as possible I will try to edit that file and just
+make it part of the Docker build. If it needs to be more flexible I will
+put it in a volume instead. For now, edit it and then build.
 
 ## Build
 
