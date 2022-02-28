@@ -25,7 +25,7 @@ RUN apt-get update && \
     apt-get install -y git alsa-utils gpsd
 
 RUN mkdir /home/direwolf
-COPY --from=direwolf_build /direwolf/build/direwolf.conf /home/direwolf
+COPY --from=direwolf_build /direwolf/build/direwolf.conf /home/direwolf/direwolf.conf.ORIGINAL
 COPY --from=direwolf /usr/local/ /usr/local/
 
 RUN groupadd -g 1000 direwolf && \
@@ -38,5 +38,7 @@ EXPOSE 8000
 
 USER direwolf
 WORKDIR /home/direwolf
+
+COPY $PWD/direwolf.conf /home/direwolf/
 
 CMD [ "direwolf", "-p" ]
