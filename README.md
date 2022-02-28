@@ -12,13 +12,14 @@ or a USB sound card connected to a radio on my Linux server, [Bellman]().
 I plan to use the radio to create an [APRS](https://aprs.org) [IGate](http://www.aprs-is.net/IGating.aspx).
 An IGate is a connection between the Internet and APRS.
 
-I'd stick with just the SDR receiver, but [I've been told that I would
-be a bad citizen]() if I do that; there is an expectation that any iGate be
-able to transmit as well as receive. Fair enough; APRS digipeaters are
-very thin on the ground here and though I find the concept of an SDR
-exciting, I happen to have some HTs that could be pressed into digipeater
-service. Possibly also a Tinytrak transceiver? I have a deep closet
-full of mysterious abandoned projects to explore.
+I'd stick with just the SDR receiver, but I've read I would be a bad
+citizen if I do that; there is an expectation that any iGate be able
+to transmit as well as receive. Fair enough; APRS digipeaters are very
+thin on the ground here and though I find the concept of an SDR
+exciting, I have some HTs that could be pressed into digipeater
+service. With a full digipeater, my new Kenwood TH-D74A would have
+someplace to connect!  Possibly also a Tinytrak transceiver? I have a
+deep closet full of mysterious abandoned projects to explore.
 
 If I manage to get the full transceiver set up, I am sure I will find
 a spot in the closet for the RTL-SDR.
