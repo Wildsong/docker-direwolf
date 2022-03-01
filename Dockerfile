@@ -40,5 +40,3 @@ USER direwolf
 WORKDIR /home/direwolf
 
 COPY $PWD/direwolf.conf /home/direwolf/
-
-CMD [ "direwolf", "-p" ]
