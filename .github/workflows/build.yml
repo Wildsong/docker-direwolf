@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Build
         id: build_image
-        use: action/docker-direwolf-action@v1
-        with:
+        uses: action/docker-direwolf-action@v1
+
        
