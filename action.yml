@@ -1,9 +1,5 @@
 name: "Direwolf IGate"
 description: "Direwolf IGate Server for Soundcard or RTL-SDR"
-inputs:
-outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-  
