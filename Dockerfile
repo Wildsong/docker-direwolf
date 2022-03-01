@@ -26,7 +26,7 @@ RUN apt-get update && \
 
 RUN mkdir /home/direwolf
 COPY --from=direwolf_build /direwolf/build/direwolf.conf /home/direwolf/direwolf.conf.ORIGINAL
-COPY --from=direwolf /usr/local/ /usr/local/
+COPY --from=direwolf_build /usr/local/ /usr/local/
 
 RUN groupadd -g 1000 direwolf && \
     useradd -M -u 1000 -g direwolf direwolf && \
