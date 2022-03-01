@@ -26,6 +26,11 @@ a spot in the closet for the RTL-SDR.
 
 ## Project status
 
+2022-03-01 I added the action.yml and .github/workflows/build.yml files
+to (attempt to) implement CI/CD.
+This should trigger a Docker build on Github and let me see the output
+whenever I do a push.
+
 2022-02-28 The image will build and run, but I don't have the audio portion (soundcard or RTL-SDR)
 set up yet, so it exits immediately.
 

@@ -1,0 +1,11 @@
+on: [push]
+jobs:
+  build_docker_image:
+    runs-on: ubuntu-latest
+    name: Building image
+    steps:
+      - name: Build
+        id: build_image
+        use: action/docker-direwolf-action@v1
+        with:
+       
