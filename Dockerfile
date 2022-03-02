@@ -39,4 +39,4 @@ COPY $PWD/direwolf.conf /srv/
 USER direwolf
 WORKDIR /home/direwolf
 
-CMD [ "direwolf", "-p", "-c", "/srv/direwolf.conf"]
+#CMD [ "direwolf", "-p", "-c", "/srv/direwolf.conf"]

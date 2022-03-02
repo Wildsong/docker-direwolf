@@ -1,9 +1,14 @@
 on: [push]
+  branches: 
+    - 'main'
+
 jobs:
   build_docker_image:
     runs-on: ubuntu-latest
     name: Building image
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Build
         id: build_image
         uses: Wildsong/docker-direwolf@main

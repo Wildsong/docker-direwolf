@@ -3,5 +3,4 @@ description: "Direwolf IGate Server for Soundcard or RTL-SDR"
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args: direwolf --help
 
