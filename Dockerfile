@@ -24,19 +24,19 @@ FROM debian:bullseye
 RUN apt-get update && \
     apt-get install -y git alsa-utils gpsd
 
-RUN mkdir /home/direwolf
-COPY --from=direwolf_build /direwolf/build/direwolf.conf /home/direwolf/direwolf.conf.ORIGINAL
+COPY --from=direwolf_build /direwolf/build/direwolf.conf /srv/direwolf.conf.ORIGINAL
 COPY --from=direwolf_build /usr/local/ /usr/local/
 
+EXPOSE 8000
+
 RUN groupadd -g 1000 direwolf && \
-    useradd -M -u 1000 -g direwolf direwolf && \
-    chown -R direwolf.direwolf /home/direwolf && \
+    useradd -u 1000 -g direwolf direwolf && \
     chfn -f "Direwolf" direwolf && \
     adduser direwolf audio
 
-EXPOSE 8000
+COPY $PWD/direwolf.conf /srv/
 
 USER direwolf
 WORKDIR /home/direwolf
 
-COPY $PWD/direwolf.conf /home/direwolf/
+CMD [ "direwolf", "-p", "-c", "/srv/direwolf.conf"]
