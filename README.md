@@ -70,6 +70,15 @@ the build will happen and get pushed to https://hub.docker.com/
  docker buildx build -t direwolf:latest .
 ```
 
+## Github Actions
+
+Th workflow in .github/workflows/build.yml will kick off a build
+at Github which culimnates in a new image push to Docker Hub.
+See https://github.com/mr-smithers-excellent/docker-build-push
+
+The README.Docker.md file will be copied to Docker Hub in the workflow.
+https://github.com/peter-evans/dockerhub-description
+
 ## Test
 
 This will start direwolf running and currently you will see its soundcard error messages.
