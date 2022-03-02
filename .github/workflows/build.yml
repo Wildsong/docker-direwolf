@@ -18,7 +18,7 @@ jobs:
       - 
         name: Build and push Docker Image to the Hub
         id: buildx
-        uses: mr-smithers-excellent/build-and-push@v5
+        uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: ${{ secrets.DOCKER_ORGANIZATION }}/direwolf
           registry: docker.io
