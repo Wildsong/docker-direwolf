@@ -79,10 +79,13 @@ You can also test the push to Docker Hub.
 
 Th workflow in .github/workflows/build.yml will kick off a build
 at Github which culimnates in a new image push to Docker Hub.
-See https://github.com/mr-smithers-excellent/docker-build-push
+
+For login, see https://github.com/docker/login-action
+
+For build and push, see https://github.com/mr-smithers-excellent/docker-build-push
 
 The README.Docker.md file will be copied to Docker Hub in the workflow.
-https://github.com/peter-evans/dockerhub-description
+See https://github.com/peter-evans/dockerhub-description
 
 ## Test
 
