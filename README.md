@@ -64,10 +64,15 @@ put it in a volume instead. For now, edit it and then build.
 ## Build
 
 Test the build locally. When changes are pushed to the repo, 
-the build will happen and get pushed to https://hub.docker.com/
+the build will happen and get pushed to Docker Hub.
 
 ```bash
- docker buildx build -t direwolf:latest .
+ docker buildx build -t docker.io/wildsong/direwolf .
+```
+You can also test the push to Docker Hub.
+
+```bash
+ docker push docker.io/wildsong/direwolf --all-tags
 ```
 
 ## Github Actions
