@@ -63,22 +63,18 @@ put it in a volume instead. For now, edit it and then build.
 
 ## Build
 
+Test the build locally. When changes are pushed to the repo, 
+the build will happen and get pushed to https://hub.docker.com/
+
 ```bash
  docker buildx build -t direwolf:latest .
-```
-
-This is how I test pushing the image to GHCR.
-
-```bash
- echo CR_PAT | docker login username=brian32768 --password-stdin
- docker push ghcr.io/wildsong/direwolf --all-tags
 ```
 
 ## Test
 
 This will start direwolf running and currently you will see its soundcard error messages.
 ```bash
-docker run -ti --rm direwolf:latest
+docker run -ti --rm wildsong/direwolf:latest
 ```
 
 ## Deploy
@@ -89,7 +85,7 @@ so that you can connect to it from (for example)
 xastir and use it to talk to your SDR.
 
 ```bash
-docker run -d -p 8000:8000 --rm direwolf:latest
+docker run -d -p 8000:8000 --rm wildsong/direwolf:latest
 ```
 
 ## Resources
