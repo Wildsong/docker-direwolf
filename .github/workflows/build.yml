@@ -13,7 +13,7 @@ jobs:
         name: Build and push Docker Image to Github
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ghcr.io/wildsong/direwolf
+          image: direwolf
           addLatest: true
           registry: ghcr.io
           username: ${{ secrets.GITHUB_USERNAME }}
