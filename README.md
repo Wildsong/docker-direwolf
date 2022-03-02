@@ -26,6 +26,16 @@ a spot in the closet for the RTL-SDR.
 
 ## Project status
 
+2022-03-02 Oh the container registry saga, I loved when Docker would automatically
+get updated via a link to Github, then they made that a fee service so I stopped using
+hub.docker.com. Then I learned I can push the build from github instead and that github
+now has their own container registry. Great! I will use that instead. ONLY, there is a
+limit of 500MB, well okay, I can probably live with that, this is a hobby after all.
+Then I pushed a container up and it would not let me make it public! That makes no
+sense. So I deleted it and went back to using the Docker Hub as the storage medium.
+Great, I just have to figure out the best path forward for that now, then I can write
+it up. I could run my own or use Google Container Registry or AWS ECR or all of them!!
+
 2022-03-01 I added the action.yml and .github/workflows/build.yml files
 to (attempt to) implement CI/CD.
 This triggers a Docker build on Github and lets me see the output
@@ -55,6 +65,13 @@ put it in a volume instead. For now, edit it and then build.
 
 ```bash
  docker buildx build -t direwolf:latest .
+```
+
+This is how I test pushing the image to GHCR.
+
+```bash
+ echo CR_PAT | docker login username=brian32768 --password-stdin
+ docker push ghcr.io/wildsong/direwolf --all-tags
 ```
 
 ## Test
