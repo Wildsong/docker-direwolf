@@ -54,7 +54,7 @@ put it in a volume instead. For now, edit it and then build.
 ## Build
 
 ```bash
- docker build -t direwolf:latest .
+ docker buildx build -t direwolf:latest .
 ```
 
 ## Test
